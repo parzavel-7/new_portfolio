@@ -37,6 +37,11 @@ import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 import download_white from "./download_white.png";
 import right_arrow_dark_contact from "./right-arrow-dark-contact.png";
+import web_development from "./web_development.jpg";
+import mobile_app from "./mobile_app.jpg";
+import ui_ux_design from "./ui_ux_design.avif";
+import graphics_design from "./graphics_design.jpg";
+import return_black from "./return_black.png";
 
 export const assets = {
   user_image,
@@ -78,6 +83,11 @@ export const assets = {
   right_arrow_bold_dark,
   download_white,
   right_arrow_dark_contact,
+  web_development,
+  mobile_app,
+  ui_ux_design,
+  graphics_design,
+  return_black,
 };
 
 export const workData = [
@@ -108,27 +118,27 @@ export const serviceData = [
     icon: assets.web_icon,
     title: "Web design",
     description: "Web development is the process of building, programming...",
-    link: "",
+    link: "/service-details#web-design",
   },
   {
     icon: assets.mobile_icon,
     title: "Mobile app",
     description:
       "Mobile app development involves creating software for mobile...",
-    link: "",
+    link: "/service-details#mobile-app",
   },
   {
     icon: assets.ui_icon,
     title: "UI/UX design",
     description:
       "UI/UX design focuses on creating a seamless user experience...",
-    link: "",
+    link: "/service-details#ui-ux",
   },
   {
     icon: assets.graphics_icon,
     title: "Graphics design",
     description: "Creative design solutions to enhance visual communication...",
-    link: "",
+    link: "/service-details#graphics",
   },
 ];
 

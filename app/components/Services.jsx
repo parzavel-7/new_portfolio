@@ -1,9 +1,9 @@
 import { serviceData } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
-import { Ovo } from "next/font/google";
 import { assets } from "@/assets/assets";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const Services = ({ isDarkMode, setIsDarkMode }) => {
   return (
@@ -60,13 +60,12 @@ const Services = ({ isDarkMode, setIsDarkMode }) => {
             <p className="text-sm text-gray-600 leading-5 dark:text-white">
               {description}
             </p>
-            <a
-              href={link}
-              className="flex items-center gap-2 text-sm mt-5 dark:text-white"
-            >
-              Read more
-              <Image src={assets.right_arrow} alt="" className="w-4" />
-            </a>
+            <Link href={link}>
+              <span className="flex items-center gap-2 text-sm mt-5 dark:text-white">
+                Read more
+                <Image src={assets.right_arrow} alt="" className="w-4" />
+              </span>
+            </Link>
           </motion.div>
         ))}
       </motion.div>
