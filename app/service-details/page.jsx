@@ -1,7 +1,9 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { assets } from "@/assets/assets";
+import { useEffect } from "react";
 
 const services = [
   {
@@ -38,43 +40,82 @@ const services = [
   },
 ];
 
-const ServiceDetails = ({ isDarkMode, setIsDarkMode }) => {
+const ServiceDetails = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      setIsDarkMode(true);
+    } else {
+      setIsDarkMode(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.theme = "dark";
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.theme = "";
+    }
+  }, [isDarkMode]);
   return (
-    <div className="w-full">
+    <div className="w-full ">
+      <div className="fixed top-0 w-full z-10 ">
+        <div className="container mx-auto p-4 flex justify-between dark:bg-[#1c1c1c]">
+          <a href="/" className="ml-5">
+            <Image
+              src={isDarkMode ? assets.return_white : assets.return_black}
+              alt="return"
+              width={30}
+              height={30}
+            />
+          </a>
+          <button
+            className="bg-transparent border-2 border-gray-400 mr-5 rounded-full px-4 py-2 hover:bg-gray-200 transition dark:hover:bg-black/80"
+            onClick={() => setIsDarkMode((prev) => !prev)}
+          >
+            {isDarkMode ? (
+              <Image
+                src={assets.sun_icon}
+                alt="dark mode"
+                width={25}
+                height={25}
+              />
+            ) : (
+              <Image
+                src={assets.moon_icon}
+                alt="light mode"
+                width={25}
+                height={25}
+              />
+            )}
+          </button>
+        </div>
+      </div>
       {services.map((service, index) => (
         <section
           id={service.id}
           key={index}
-          className="mt-20 p-36 scroll-mt-20 flex flex-col md:flex-row items-center justify-center px-6 md:px-16 bg-white text-gray-900 border border-gray-400 p-10 rounded-lg shadow-black m-10"
+          className={`mt-20 p-36 scroll-mt-20 flex flex-col md:flex-row items-center justify-center px-6 md:px-16 bg-white text-gray-900 border border-gray-400 p-10 rounded-lg shadow-black m-10 dark:bg-gray-800 dark:text-white dark:border-gray-600`}
         >
-          <header className="fixed top-0 w-full bg-black/5 z-10 ">
-            <div
-              className={`container mx-auto p-4 ml-8 flex justify-between ${
-                isDarkMode ? "bg-darkTheme text-white" : "bg-white text-black"
-              }`}
-            >
-              <a href="/">
-                <Image
-                  src={assets.return_black}
-                  alt="return"
-                  width={30}
-                  height={30}
-                />
-              </a>
-            </div>
-          </header>
-          <div className="md:w-1/2 mb-8 md:mb-0 ">
+          <div className="md:w-1/2 mb-8 md:mb-0">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">
               {service.title}
             </h2>
             <p className="text-lg md:text-xl mb-6">{service.description}</p>
             <a
               href={service.link}
-              className="inline-block px-6 py-3 bg-black text-white rounded-full hover:bg-blue-700 transition"
+              className="inline-block px-6 py-3 bg-black text-white rounded-full hover:bg-black/70 transition dark:bg-white dark:text-black dark:hover:bg-white/70"
             >
               View Projects
               <Image
-                src={assets.arrow_icon_dark}
+                src={isDarkMode ? assets.arrow_icon : assets.arrow_icon_dark}
                 alt="arrow"
                 className="w-3 inline-block ml-2"
               />

@@ -6,7 +6,7 @@ import edu_icon_dark from "./edu-icon-dark.png";
 import project_icon from "./project-icon.png";
 import project_icon_dark from "./project-icon-dark.png";
 import vscode from "./vscode.png";
-import firebase from "./firebase.png";
+import canva from "./canva.png";
 import figma from "./figma.png";
 import git from "./git.png";
 import mongodb from "./mongodb.png";
@@ -42,6 +42,12 @@ import mobile_app from "./mobile_app.jpg";
 import ui_ux_design from "./ui_ux_design.avif";
 import graphics_design from "./graphics_design.jpg";
 import return_black from "./return_black.png";
+import return_white from "./return_white.png";
+import github from "./github.png";
+import linkedin from "./linkedin.png";
+import instagram from "./instagram.png";
+import facebook from "./facebook.png";
+import twitter from "./twitter.png";
 
 export const assets = {
   user_image,
@@ -52,7 +58,7 @@ export const assets = {
   project_icon,
   project_icon_dark,
   vscode,
-  firebase,
+  canva,
   figma,
   git,
   mongodb,
@@ -88,6 +94,12 @@ export const assets = {
   ui_ux_design,
   graphics_design,
   return_black,
+  return_white,
+  github,
+  linkedin,
+  instagram,
+  facebook,
+  twitter,
 };
 
 export const workData = [
@@ -166,8 +178,31 @@ export const infoList = [
 
 export const toolsData = [
   assets.vscode,
-  assets.firebase,
+  assets.canva,
   assets.mongodb,
   assets.figma,
   assets.git,
+];
+
+export const socialLinks = [
+  {
+    icon: assets.github,
+    link: "https://github.com/parzavel-7",
+  },
+  {
+    icon: assets.linkedin,
+    link: "https://www.linkedin.com/in/suraj-ganesh-8313532aa/",
+  },
+  {
+    icon: assets.instagram,
+    link: "https://www.facebook.com/suraj.ganesh.50",
+  },
+  {
+    icon: assets.facebook,
+    link: "https://www.facebook.com/suraj.ganesh.50",
+  },
+  {
+    icon: assets.twitter,
+    link: "https://x.com/Parzavel568",
+  },
 ];

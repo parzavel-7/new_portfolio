@@ -1,4 +1,4 @@
-import { assets } from "@/assets/assets";
+import { assets, socialLinks, toolsData } from "@/assets/assets";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
@@ -10,6 +10,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+        className="flex items-center justify-center mt-20"
       >
         <Image
           src={assets.profile_img}
@@ -19,7 +20,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
       </motion.div>
 
       <motion.h3
-        className="flex items-end gap-2 text-xl  md:text-2xl mb-3 font-Ovo"
+        className="flex items-center gap-2 text-xl  md:text-2xl mb-3 font-Ovo "
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
@@ -82,6 +83,35 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
             className="w-4"
           />
         </motion.a>
+      </div>
+
+      <div className="mt-4">
+        <motion.h4
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1.3 }}
+          className="my-4 text-black font-Ovo dark:text-white/80"
+        >
+          Visit me on
+        </motion.h4>
+        <motion.ul
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1.5 }}
+          className="flex items-center gap-3 sm:gap-5"
+        >
+          {socialLinks.map(({ icon, link }, index) => (
+            <motion.li
+              whileHover={{ scale: 1.1 }}
+              key={index}
+              className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-full cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-black dark:bg-white/90 dark:hover:shadow-white/20"
+            >
+              <a target="_blank" href={link}>
+                <Image src={icon} alt="tool" className="w-5 sm:w-7" />
+              </a>
+            </motion.li>
+          ))}
+        </motion.ul>
       </div>
     </div>
   );
