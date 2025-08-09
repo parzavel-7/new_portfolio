@@ -102,7 +102,7 @@ const ServiceDetails = () => {
         <section
           id={service.id}
           key={index}
-          className={`mt-20 p-36 scroll-mt-20 flex flex-col md:flex-row items-center justify-center px-6 md:px-16 bg-white text-gray-900 border border-gray-400 p-10 rounded-lg shadow-black m-10 dark:bg-gray-800 dark:text-white dark:border-gray-600`}
+          className={`mt-20 scroll-mt-20 flex flex-col md:flex-row items-center justify-center px-6 md:px-16 bg-white text-gray-900 border border-gray-400 p-10 rounded-lg shadow-black m-10 dark:bg-gray-800 dark:text-white dark:border-gray-600`}
         >
           <div className="md:w-1/2 mb-8 md:mb-0">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">
