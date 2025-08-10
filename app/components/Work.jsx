@@ -15,7 +15,7 @@ const Work = ({ isDarkMode, setIsDarkMode }) => {
       <motion.h4
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.18 }}
         className="text-center mb-2 text-lg font-Ovo"
       >
         My Portfolio
@@ -23,7 +23,7 @@ const Work = ({ isDarkMode, setIsDarkMode }) => {
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
         className="text-center text-3xl font-sans"
       >
         My Latest Work
@@ -32,7 +32,7 @@ const Work = ({ isDarkMode, setIsDarkMode }) => {
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
+        transition={{ duration: 0.5, delay: 0.42 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
         This portfolio includes some of my latest and greatest work. I have a
@@ -45,7 +45,7 @@ const Work = ({ isDarkMode, setIsDarkMode }) => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.9 }}
+        transition={{ duration: 0.6, delay: 0.54 }}
         className="grid grid-cols-auto gap-5 my-10 dark:text-black"
       >
         {workData.map((project, index) => (
@@ -72,7 +72,7 @@ const Work = ({ isDarkMode, setIsDarkMode }) => {
       <motion.a
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1.2 }}
+        transition={{ duration: 0.5, delay: 0.72 }}
         href=""
         className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] rounded-full border-gray-700 py-3 px-10 mx-auto my-20 hover:bg-gray-200 hover:shadow-black duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover"
       >

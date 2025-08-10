@@ -23,7 +23,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
         className="flex items-center gap-2 text-xl  md:text-2xl mb-3 font-Ovo "
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
+        transition={{ duration: 0.6, delay: 0.21 }}
       >
         Hi! I'm Suraj Ganesh
         <Image src={assets.hand_icon} alt="hand_icon" className="w-6" />
@@ -33,7 +33,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
         className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo "
         initial={{ y: -30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
+        transition={{ duration: 0.8, delay: 0.35 }}
       >
         Frontend web developer from Nepal.
       </motion.h1>
@@ -42,7 +42,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
         className="max-w-2xl mx-auto font-Ovo"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.7 }}
+        transition={{ duration: 0.6, delay: 0.49 }}
       >
         I am a frontend web developer from Jhapa, Nepal with 2 years of
         experience in multiple fields.
@@ -52,7 +52,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
         <motion.a
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
           href="#contact"
           className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-white dark:text-black"
         >
@@ -71,7 +71,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
         <motion.a
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
+          transition={{ duration: 0.6, delay: 0.84 }}
           href="/Suraj_Ganesh_Resume.pdf"
           download
           className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-white dark:bg-[#1c1c1c]"
@@ -89,7 +89,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
         <motion.h4
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1.3 }}
+          transition={{ duration: 0.5, delay: 0.91 }}
           className="my-4 text-black font-Ovo dark:text-white/80"
         >
           Visit me on
@@ -97,7 +97,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
         <motion.ul
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.5 }}
+          transition={{ duration: 0.6, delay: 1.05 }}
           className="flex items-center gap-3 sm:gap-5"
         >
           {socialLinks.map(({ icon, link }, index) => (
@@ -118,3 +118,4 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
 };
 
 export default Header;
+
