@@ -124,7 +124,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           <li>
             <a
               href="#top"
-              className="font-Ovo p-5 px-16 rounded-full hover:bg-gray-500 transition duration-700"
+              className="font-Ovo p-5 px-15 rounded-full hover:bg-gray-500 transition duration-700"
               onClick={closeMenu}
             >
               Home
